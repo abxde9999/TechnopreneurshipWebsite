@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UndergrounD - About</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-crown icon'></i>
+        <div class="logo_name">UndergrounD</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="home.html">
+          <i class='bx bx-home-circle bx-tada-hover'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="about.html">
+         <i class='bx bxs-business bx-tada-hover'></i>
+         <span class="links_name">About</span>
+       </a>
+       <span class="tooltip">Our Company</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bxl-twitter bx-tada-hover'></i>
+         <span class="links_name">Follow Us</span>
+       </a>
+       <span class="tooltip">Follow Us</span>
+     </li>
+     <li>
+       <a href="subs.html">
+         <i class='bx bxs-envelope bx-tada-hover'></i>
+         <span class="links_name">Subscribe</span>
+       </a>
+       <span class="tooltip">Subscribe</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <div class="name_job">
+             <div class="name">Abode Paul BSIT 3-2</div>
+             <div class="job">Technopreneurship</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+      <div class="jumbotron about p-5 bg-primary text-white text-center">
+  <h1>UndergrounD</h1>
+  <p>The Common Ground for Everyone!!</p> 
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Our Company</h2>
+      <p>Underground Inc. operates as an e-commerce company. The company platform only includes online market place and is headquartered here in the Philippines. The company technologies and services are designed for online auctions, where people can gather to buy, sell, trade and check out for the goods. The company was founded by Paul John Abode in 2022....</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>Vision and Mission</h2>
+      <p>Our vision is to become one the Philippines’ leading company, bringing a million of people through an array of an e-commerce website....</p>
+      <p>Our mission is to build a community where it creates a pathway to connect a million of sellers and buyers here in the Philippines....</p>
+    </div>
+    <div class="col-sm-4">
+      <h2>Market</h2>        
+      <p>Social Media is used to be one-to-many business channel, with a chance for our brands to market to the masses with links, photos and videos. The purpose of these were to drive click offsite and ultimately foster sales growth. It instills your brand culture with customers and an opportunity to make them feel a certain way when they think about our company....</p>
+    </div>
+    <div>
+      <img src="img5.jpeg">
+    </div>
+  </div>
+</div>
+  
+  </section>
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
